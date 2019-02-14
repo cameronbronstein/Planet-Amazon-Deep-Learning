@@ -11,7 +11,7 @@ Sections (skip to...):
 - [Gathering the Data](#Gathering-the-Data)
 - [Exploratory Data Analysis](#Exploratory-Data-Analysis)
 - [Moving to the Cloud with AWS](#Moving-to-the-Cloud-with-AWS)
-- [Image Pre-Processing: Test-Time Augementation](#Image-Pre-Processing:-Test-Time-Augementation-(TTA))
+- [Image Preprocessing](#Image-Preprocessing)
 - [Modeling](#Modeling)
 - [Results](#Results)
 - [Future Steps and Limitations](#Future-Steps-and-Limitations)
@@ -38,7 +38,7 @@ The images come from Planet's Planetscope Satellites and are 3 M resolution.
 Included are Analytic Geotiff and Visual JPEG formats - cropped to 256 x 256 pixels.
 The Geotiffs contain four color bands (Red, Green, Blue, Near Infrared), while the JPEGs are correct into a 3 band visual product. 
 
-### Exploratory Data Analysis and Image Preprocessing
+### Exploratory Data Analysis
 EDA mainly included understanding the distributions of varrying label classes and generating images from the provided geotiff files. Plotting geotiffs requires altering their RGB-IFR values to create a better visual product. The tiffs are originally in a format generated from "what the satellite sees".
 
 There were also varying hurdles to overcome the enormaty of the dataset when preparing the images for modeling (due to RAM limits on my local machine). Geotiffs can be converted to numeric array (necessary for processing by the neural network) through a library called [rasterio](https://github.com/mapbox/rasterio).
@@ -51,7 +51,8 @@ Once I realized the data size and RAM hurdles, I changed gears and moved the pro
 
 However, I still faced memory limitations using the AWS servers, so I had to use Image Pre-Processing tools native to KERAS to prepare my dataset for modeling.
 
-#### Image Pre-Processing: Test-Time Augementation (TTA)
+### Image Preprocessing
+**Test-Time Augmentation (TTA)**
 
 I was introduced to `ImageDataGenerator` class in Keras Image Preprocessing. This allowed me to apply test-time augmentation (random flipping, rotating, zooming of training images) for better modeling approach.
 
