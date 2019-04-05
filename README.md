@@ -2,6 +2,8 @@
 ## Capstone Project - General Assembly Data Science Immersive
 ##### Cameron Bronstein
 
+If there are problems loading notebooks, copy the github url for each notebook into this [Jupyter notebook viewer.](https://nbviewer.jupyter.org/)
+
 ### Executive Summary
 This project is a multi-label computer vision classification problem. I used machine learning to classify satellite images of the amazon into varying weather and land-use categories. Modeling included building a convolutional neural network to train and process a dataset that included a 20 GB, 40,000 image training dataset and 30 GB - 60,000 image test dataset.
 
