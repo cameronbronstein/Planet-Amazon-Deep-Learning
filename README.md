@@ -30,7 +30,11 @@ However, to demonstrate generating my own images with Planet's [API](https://pla
 
 Given time constraints, I decided to move forward with the Kaggle Dataset. However, with increased permissions (i.e. access to data outside of Planet's free Open California imagery), it is highly feasible to use the Planet API to create more data for the sake of this project.
 
+<<<<<<< HEAD
 **From Kaggle Dataset**
+=======
+**From Kaggle Dataet**
+>>>>>>> 1d3a02fdc07f262f8e5cf7cefefd5bd0c27d0f5b
 
 This was my first forray into a more serious big-data project. The dataset included a ~20 GB training dataset (40,000 labeled images) and ~30 GB test dataset (unlabled images to be submitted and scored on competition website). Each image is approximately 525 KB.
 
